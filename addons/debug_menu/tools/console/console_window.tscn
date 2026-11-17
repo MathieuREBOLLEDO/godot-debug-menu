@@ -1,0 +1,8 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://addons/debug_menu/tools/console/console_window.gd" id="1_script"]
+
+[node name="ConsoleWindow" type="Window"]
+title = "Console"
+size = Vector2i(640, 420)
+script = ExtResource("1_script")

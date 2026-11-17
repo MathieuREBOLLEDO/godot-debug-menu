@@ -1,0 +1,8 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://addons/debug_menu/tools/camera/free_camera_window.gd" id="1_script"]
+
+[node name="FreeCameraWindow" type="Window"]
+title = "Free camera"
+size = Vector2i(440, 420)
+script = ExtResource("1_script")

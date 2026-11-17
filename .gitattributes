@@ -1,0 +1,8 @@
+# Normalize line endings (LF, like the files Godot writes).
+* text=auto eol=lf
+
+# Only the addon goes into Asset Library downloads.
+/.gitignore export-ignore
+/.gitattributes export-ignore
+/README.md export-ignore
+/docs export-ignore

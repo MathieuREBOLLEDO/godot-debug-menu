@@ -1,0 +1,8 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://addons/debug_menu/time/time_window.gd" id="1_script"]
+
+[node name="TimeWindow" type="Window"]
+title = "Time"
+size = Vector2i(440, 320)
+script = ExtResource("1_script")

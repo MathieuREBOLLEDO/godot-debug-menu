@@ -1,0 +1,8 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://addons/debug_menu/time/recording/recordings_window.gd" id="1_script"]
+
+[node name="RecordingsWindow" type="Window"]
+title = "Recordings"
+size = Vector2i(520, 460)
+script = ExtResource("1_script")

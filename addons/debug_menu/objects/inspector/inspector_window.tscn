@@ -1,0 +1,8 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://addons/debug_menu/objects/inspector/inspector_window.gd" id="1_script"]
+
+[node name="InspectorWindow" type="Window"]
+title = "Inspector"
+size = Vector2i(600, 640)
+script = ExtResource("1_script")

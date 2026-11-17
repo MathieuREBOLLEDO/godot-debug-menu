@@ -1,0 +1,86 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://addons/debug_menu/debug_menu.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://addons/debug_menu/icons/star_filled.svg" id="2_star"]
+[ext_resource type="Texture2D" path="res://addons/debug_menu/icons/gear.svg" id="3_gear"]
+[ext_resource type="Script" path="res://addons/debug_menu/windows/window_manager.gd" id="4_windows"]
+[ext_resource type="Script" path="res://addons/debug_menu/bar/menu_switcher.gd" id="5_switcher"]
+[ext_resource type="Texture2D" path="res://addons/debug_menu/icons/mouse.svg" id="9_mouse"]
+[ext_resource type="Script" path="res://addons/debug_menu/bar/menu_bar.gd" id="6_bar"]
+[ext_resource type="Texture2D" path="res://addons/debug_menu/icons/chevron_left.svg" id="7_left"]
+[ext_resource type="Texture2D" path="res://addons/debug_menu/icons/chevron_right.svg" id="8_right"]
+
+[node name="DebugMenu" type="CanvasLayer"]
+process_mode = 3
+layer = 100
+script = ExtResource("1_script")
+
+[node name="MouseBlocker" type="Control" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Bar" type="PanelContainer" parent="."]
+visible = false
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+script = ExtResource("6_bar")
+
+[node name="Row" type="HBoxContainer" parent="Bar"]
+layout_mode = 2
+
+[node name="CoreMenus" type="HBoxContainer" parent="Bar/Row"]
+layout_mode = 2
+
+[node name="Switcher" type="HBoxContainer" parent="Bar/Row"]
+layout_mode = 2
+theme_override_constants/separation = 0
+script = ExtResource("5_switcher")
+
+[node name="PrevButton" type="Button" parent="Bar/Row/Switcher"]
+visible = false
+layout_mode = 2
+focus_mode = 0
+icon = ExtResource("7_left")
+
+[node name="FavoritesMenu" type="MenuButton" parent="Bar/Row/Switcher"]
+visible = false
+layout_mode = 2
+text = "Favorites"
+icon = ExtResource("2_star")
+
+[node name="Menus" type="HBoxContainer" parent="Bar/Row/Switcher"]
+layout_mode = 2
+
+[node name="NextButton" type="Button" parent="Bar/Row/Switcher"]
+visible = false
+layout_mode = 2
+focus_mode = 0
+icon = ExtResource("8_right")
+
+[node name="GameMenus" type="HBoxContainer" parent="Bar/Row"]
+layout_mode = 2
+
+[node name="Spacer" type="Control" parent="Bar/Row"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="MouseModeButton" type="Button" parent="Bar/Row"]
+layout_mode = 2
+focus_mode = 0
+text = "Both"
+icon = ExtResource("9_mouse")
+
+[node name="SettingsButton" type="Button" parent="Bar/Row"]
+layout_mode = 2
+focus_mode = 0
+tooltip_text = "Settings"
+icon = ExtResource("3_gear")
+
+[node name="Windows" type="Node" parent="."]
+script = ExtResource("4_windows")

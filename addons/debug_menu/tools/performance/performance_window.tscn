@@ -1,0 +1,8 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://addons/debug_menu/tools/performance/performance_window.gd" id="1_script"]
+
+[node name="PerformanceWindow" type="Window"]
+title = "Performance"
+size = Vector2i(460, 600)
+script = ExtResource("1_script")
